@@ -4,10 +4,11 @@
   "info": {
     "singularName": "note",
     "pluralName": "notes",
-    "displayName": "Note"
+    "displayName": "Note",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -19,6 +20,9 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "isTrue": {
+      "type": "boolean"
     }
   }
 }

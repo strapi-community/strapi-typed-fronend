@@ -19,6 +19,7 @@ export type GetValues<TSchemaUID extends Common.UID.Schema> =
  *
  * Fallback to unknown if never is found
  */
+
 export type GetValue<TAttribute extends Attribute.Attribute> = Utils.Expression.If<
 Utils.Expression.IsNotNever<TAttribute>,
 Utils.Expression.MatchFirst<
@@ -66,12 +67,11 @@ interface AttributesWrapper<TContentTypeUID extends Common.UID.ContentType> {
     attributes: GetValues<TContentTypeUID>
 }
 
-export interface Response<TContentTypeUID extends Common.UID.ContentType> {
-    data: AttributesWrapper<TContentTypeUID>
+export interface CollectionTypeResponse<TContentTypeUID extends Common.UID.ContentType> {
+    data: [AttributesWrapper<TContentTypeUID>]
+    meta: any
 }
 
 // TEST
-declare function fetch<T extends Common.UID.ContentType>(uid: T): Promise<Response<T>>;
-​
-
-fetch('api::note.note').then(r => r.data.attributes.content)
+// declare function fetch<T extends Common.UID.ContentType>(uid: T): Promise<Response<T>>;
+// fetch('api::note.note').then(r => r.data.attributes.content)
