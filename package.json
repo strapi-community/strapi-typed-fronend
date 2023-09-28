@@ -1,0 +1,12 @@
+{
+  "name": "strapi-remix-typed",
+  "version": "1.0.0",
+  "description": "Strapi Remix Typed Frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copyTypes": "node copyTypes.js"
+  },
+  "author": "Paul Bratslavsky",
+  "license": "MIT"
+}
